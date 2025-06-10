@@ -641,8 +641,10 @@ def generate_questions():
                     elif time_match:
                          recommended_time = time_match.group(1).strip()
 
-            # Display the question title clearly
-            st.subheader(f"Question {question_num}: {main_question}")
+            # Display the question title clearly, separating number and actual question
+            st.markdown(f"<h4>Question {question_num}:</h4>", unsafe_allow_html=True)
+            # Display the main question with a larger font size
+            st.markdown(f"<div style='font-size: 1.5rem; font-weight: bold;'>{main_question}</div>", unsafe_allow_html=True)
 
             # Display hints in a list with smaller font
             if hints_list or recommended_time:
@@ -655,7 +657,6 @@ def generate_questions():
                 if recommended_time:
                     st.markdown(f"**Recommended Time:** {recommended_time}")
                 st.markdown("</div>", unsafe_allow_html=True)
-
             # --- End: Parse and Display Question and Hints ---
 
             # Retrieve existing value for pre-filling
