@@ -1,4 +1,4 @@
-# TalentScout Hiring Assistant
+# AI Interview Assistant
 
 An AI-powered hiring assistant that screens candidates and generates technical questions with **Loom video responses** and **Supabase cloud storage** (with local JSON fallback).
 
